@@ -54,7 +54,7 @@ abstract class JSONParser extends BaseParser implements JSONParserInterface {
 	 */
 	public static function parseNdJSON($query): Iterable {
 		do {
-			$eolPos = strpos($query, PHP_EOL);
+			$eolPos = strpos($query, "\n");
 			if ($eolPos === false) {
 				$eolPos = strlen($query);
 			}
